@@ -27,7 +27,7 @@ vraca stanje svih 32 registra** (i, dodatno, sadrzaj memorije podataka).
 
 2. Arhitektura resenja
 
-
+'''
   korisnicki prostor            kernel prostor
  ┌───────────────────┐        ┌──────────────────────────────────────┐
  │     app_sw        │  write │  cpu_sw_driver.c                     │
@@ -38,7 +38,7 @@ vraca stanje svih 32 registra** (i, dodatno, sadrzaj memorije podataka).
  │                   │  read  │   └────────────────────────────────┘ │
  │  ispis registara  │<───────│   rv32_step()  - fetch/decode/exec   │
  └───────────────────┘        └──────────────────────────────────────┘
-
+'''
 
 Zasto ovakva podela: `rv32_core.h` ne zavisi ni od jednog kernel API-ja osim
 `linux/types.h` i `string.h`, pa se isti kod prevodi i kao obican C program.
